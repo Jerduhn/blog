@@ -1,12 +1,13 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter Blog`,
-    author: `Kyle Mathews`,
-    description: `A starter blog demonstrating what Gatsby can do.`,
-    siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`,
+    title: `The Dumb SRE`,
+    author: `Jordan Gillies`,
+    description: `Collected ramblings on reliability engineering, networking, ops and software development.`,
+    siteUrl: `https://joordg.xyz`,
     social: {
-      twitter: `kylemathews`,
+      twitter: `DumbSre`,
     },
+    location: `Amsterdam`,
   },
   plugins: [
     {
@@ -73,6 +74,14 @@ module.exports = {
       options: {
         pathToConfigModule: `src/utils/typography`,
       },
+    },
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          `gatsby-remark-prismjs`,
+        ]
+      }
     },
   ],
 }
